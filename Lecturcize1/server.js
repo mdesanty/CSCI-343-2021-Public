@@ -1,11 +1,11 @@
 var http = require('http');
 var server = http.createServer(requestHandler); 
-server.listen(process.env.PORT, process.env.IP, startHandler);
+server.listen(3000, 'localhost', startHandler);
 
 function startHandler()
 {
   var addr = server.address();
-  console.log("Server listening at", addr.address + ":" + addr.port);
+  console.log("Server listening at localhots:3000");
 }
 
 function requestHandler(req, res) 
